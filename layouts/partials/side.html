@@ -1,0 +1,10 @@
+<div class="side float-left clearfix">
+  <a href="{{ "/" | absURL}}"> <img class="side-avatar" src="{{ $.Site.Params.avatar | absURL }}" > </a>
+  <div class="side-item side-title"> {{ .Site.Title }} </div>
+  <div class="side-item"> {{ .Site.Params.Description }} </div>
+  <ul class="side-item side-nav">
+    {{ range .Site.Menus.navigation }}
+    <li> <a href="{{ .URL | absURL }}"> {{ .Name }} </a> </li>
+    {{ end }}
+  </ul>
+</div>
