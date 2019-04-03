@@ -23,14 +23,14 @@ h2::before {
 }
 
 .content-wrapper  {
-  width: 900px;
+  width: 820px;
   margin: 0 auto;
 }
 
 .container {
   box-sizing: border-box;
   padding: 20px;
-  width: 680px;
+  width: 600px;
 }
 
 .float-right {
@@ -96,9 +96,9 @@ h1,article-title {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 950px) {
-  .content-wrapper { width: 680px; }
-  .side { width: 680px; position: static; }
+@media only screen and (max-width: 850px) {
+  .content-wrapper { width: 600px; }
+  .side { width: 600px; position: static; }
   .side-item { width: 200px; margin: 10px auto; text-align: center; }
 }
 
