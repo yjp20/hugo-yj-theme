@@ -1,13 +1,18 @@
+{{/*
+vim: ft=gohtmltmpl
+*/}}
 {{ define "main" }}
-{{ range .Pages }}
-<div class="container float-right">
-  <div class="content-header">
-    <h1 class="article-title"> {{ .Title }} </h1>
-    <p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
-  </div>
-  <div class="content">
-  {{ .Content }}
-  </div>
-</div>
-{{ end }}
+	{{ range (.GetPage "/posts").Pages }}
+		<div class="container float-right">
+			<article class="article">
+				<div class="content-header">
+					<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+					<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
+				</div>
+				<div class="content">
+					{{ .Content }}
+				</div>
+			</article>
+		</div>
+	{{ end }}
 {{ end }}
