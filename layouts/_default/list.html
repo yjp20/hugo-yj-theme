@@ -3,14 +3,20 @@ vim: ft=gohtmltmpl
 */}}
 {{ define "main" }}
 	<div class="container float-right">
-		{{ range .Paginator.Pages }}
-			<article class="article">
-				<div class="content-header">
-					<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-					<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
-					<p> {{.Summary}} </p>
-				</div>
-			</article>
-		{{ end }}
+		<ul>
+			{{ range .Paginator.Pages }}
+				<li class="post-listing">
+					<article class="article">
+						<div class="article-header">
+							<a href="{{ .Permalink }}">
+								<h2 class="article-title">{{ .Title }}</h2>
+								<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
+							</a>
+						</div>
+					</article>
+				</li>
+			{{ end }}
+			{{ template "_internal/pagination.html" . }}
+		</ul>
 	</div>
 {{ end }}
