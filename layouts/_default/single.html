@@ -6,7 +6,7 @@ vim: ft=gohtmltmpl
 		<a href="{{"/posts" | absURL}}"> &larr; posts </a>
 		<article class="article">
 			<div class="article-header">
-				<h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+				<h1><a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
 				<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
 			</div>
 			<div class="content">

@@ -4,8 +4,8 @@
     <body>
         {{- partial "header.html" . -}}
         <div class="content-wrapper clearfix">
-          {{ partial "side.html" . }}
-          {{- block "main" . }}{{- end }}
+          {{- partial "side.html" . -}}
+          {{- block "main" . -}}{{- end -}}
         </div>
         {{- partial "footer.html" . -}}
     </body>
