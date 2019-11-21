@@ -89,6 +89,11 @@ a:hover {
 	margin-top: 0.2em;
 }
 
+.article img {
+	width: 100%;
+	height: auto;
+}
+
 
 /* }}} */
 
