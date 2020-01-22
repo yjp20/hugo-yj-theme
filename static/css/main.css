@@ -2,7 +2,12 @@
 
 /* base {{{ */
 
+:root {
+	--body-color: #333;
+}
+
 body {
+	color: var(--body-color);
   margin: 0;
 	background-color: #f9f9f9;
   font-family: 'Source Serif Pro', 'serif';
@@ -52,7 +57,7 @@ a:hover {
 }
 
 .article a.article-title {
-	color: #333;
+	color: var(--body-color);
 	font-weight: 700;
 	padding-bottom: 0.1em;
 }
@@ -60,7 +65,7 @@ a:hover {
 .article a.article-title{
 	transition: 0.1s all ease;
 	border-bottom: 2px solid #00000000;
-	color: #333;
+	color: var(--body-color);
 	text-decoration: none;
 }
 
@@ -135,7 +140,7 @@ a:hover {
 .side {
   box-sizing: border-box;
   margin: 30px 0;
-	border-top: 4px solid #666;
+	border-top: 4px solid var(--body-color);
   width: 180px;
 	text-align: right;
 }
