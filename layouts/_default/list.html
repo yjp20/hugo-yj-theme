@@ -2,22 +2,27 @@
 vim: ft=gohtmltmpl
 */}}
 {{ define "main" }}
-	<div class="container float-right">
-		<h1 class="label"> {{ .Title }} </h1>
-		<ul>
-			{{ range .Paginator.Pages }}
-				<li class="post-listing">
-					<article class="article">
-						<div class="article-header">
-							<p>
-								<a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
-								<span class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </span>
-							</a>
-						</div>
-					</article>
-				</li>
-			{{ end }}
-			{{ template "_internal/pagination.html" . }}
-		</ul>
-	</div>
+	<h1 class="label"> {{ .Title }} </h1>
+	<ul>
+		{{ range .Paginator.Pages }}
+			<li class="post-listing">
+				<article class="article">
+					<div class="article-header">
+						<p>
+							<a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+							<span class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </span>
+						</a>
+					</div>
+				</article>
+			</li>
+		{{ end }}
+		{{ template "_internal/pagination.html" . }}
+		<div class="tags">
+			<p> tags:
+			{{range .Site.Taxonomies.tags}}
+				<a href="{{.Page.Permalink}}">{{.Page.Title}}</a>
+			{{end}}
+			</p>
+		</div>
+	</ul>
 {{ end }}

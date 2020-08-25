@@ -2,21 +2,16 @@
 vim: ft=gohtmltmpl
 */}}
 {{ define "main" }}
-	<div class="container float-right">
-		{{ $paginator := .Paginate (where .Site.RegularPages ".Section" "posts")}}
-		{{ range $paginator.Pages }}
-			<div class="post-listing-long">
-				<article class="article">
-					<div class="article-header">
-						<h1><a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-						<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
-					</div>
-					<div class="content">
-						{{ .Content }}
-					</div>
-				</article>
-			</div>
-		{{ end }}
-		{{ template "_internal/pagination.html" $ }}
+	<div class="article">
+		<h2 class="article-title">Who am I?</h2>
+		<p>I'm a student currently studying at UC Berkeley, with plans to declare my major in CS. I'm captivated by interesting ideas and love to build things that make a difference.</p>
+		<h2 class="article-title">Skills</h2>
+		<ul>
+			<li><b>NodeJS</b><br/>Used as a backend language for my various personal projects and my mewx multiplayer library due to NodeJS's rapid development and relatively strong performance.</li>
+			<li><b>Golang</b><br/>Similar to NodeJS, Golang was used as a backend to various personal projects and is my language of choice when it comes to typed languages.</li>
+			<li><b>HTML, CSS, JS</b><br/>Used extensively at work as a frontend engineer, together with common frameworks and libraries such as React, Material-ui, etc.</li>
+			<li><b>Typescript</b><br/>Extensive experience with Typescript itself and the complex tooling that usually accompanies typescript (jest, webpack, typescript, rollup).</li>
+			<li><b>PHP</b><br/>Used php to put together a fully-featured wordpress theme by hand for my highschool newspaper</b>
+		</ul>
 	</div>
 {{ end }}
