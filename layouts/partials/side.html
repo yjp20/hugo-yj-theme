@@ -1,14 +1,11 @@
 {{/*
 vim: ft=gohtmltmpl
 */}}
-<div class="header">
-	<div class="header-item">
-		<a href={{ "/" | absURL }} class="header-title"> {{ .Site.Title }} </a>
-		<div class="header-desc"> {{ .Site.Params.Description }} </div>
-	</div>
-	<ul class="header-item header-nav">
+<div class="side">
+	<a href={{ "/" | absURL }} class="side-title"> {{ .Site.Title }} </a>
+	<ul class="side-nav">
 		{{ range .Site.Menus.navigation }}
-			<li> <a href="{{ .URL | absURL }}"> {{ .Name }} </a> </li>
+			<li class="side-item"> <a href="{{ .URL | absURL }}"> {{ .Name }} </a> </li>
 		{{ end }}
 	</ul>
 </div>

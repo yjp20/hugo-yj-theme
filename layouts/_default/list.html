@@ -7,12 +7,10 @@ vim: ft=gohtmltmpl
 		{{ range .Paginator.Pages }}
 			<li class="post-listing">
 				<article class="article">
-					<div class="article-header">
-						<p>
-							<a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
-							<span class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </span>
-						</a>
-					</div>
+					<p>
+						<a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+						<span class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </span>
+					</a>
 				</article>
 			</li>
 		{{ end }}

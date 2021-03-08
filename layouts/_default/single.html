@@ -6,9 +6,9 @@ vim: ft=gohtmltmpl
 		<div class="article-header">
 			<h1><a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
 			<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
-		</div>
-		<div class="toc">
-			{{ .TableOfContents }}
+			<div class="toc hide-desktop">
+				{{ .TableOfContents }}
+			</div>
 		</div>
 		<div class="content">
 			{{ .Content }}
@@ -21,4 +21,9 @@ vim: ft=gohtmltmpl
 			</p>
 		</div>
 	</article>
+{{ end }}
+{{ define "rest" }}
+	<div class="toc hide-mobile">
+		{{ .TableOfContents }}
+	</div>
 {{ end }}
