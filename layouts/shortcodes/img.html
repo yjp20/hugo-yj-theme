@@ -1,0 +1,5 @@
+{{$img := $.Page.Resources.GetMatch (.Get 0)}}
+{{ if (.Get 2) }}
+	{{ $img = $img.Resize (.Get 2) }}
+{{ end }}
+<img src="{{ $img.RelPermalink }}" alt="{{.Get 1}}" />
