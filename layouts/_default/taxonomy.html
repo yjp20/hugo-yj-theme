@@ -1,0 +1,19 @@
+{{/*
+vim: ft=gohtmltmpl
+*/}}
+{{ define "main" }}
+	<h1 class="label">tag: {{ .Title }} </h1>
+	<ul>
+		{{ range .Paginator.Pages }}
+			<li class="post-listing">
+				<article class="article">
+					<p>
+						<a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+						<span class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </span>
+					</a>
+				</article>
+			</li>
+		{{ end }}
+		{{ template "_internal/pagination.html" . }}
+	</ul>
+{{ end }}
