@@ -56,7 +56,7 @@ a:not(.not-link) {
 }
 
 .link::after,
-a::after {
+a:not(.not-link)::after {
 	position: absolute;
 	top: 0;
 	right: -3px;
@@ -68,7 +68,7 @@ a::after {
 }
 
 .link:hover::after,
-a:hover::after {
+a:not(.not-link):hover::after {
 	background-color: var(--primary-color-light);
 }
 
