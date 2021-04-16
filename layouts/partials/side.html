@@ -8,4 +8,9 @@ vim: ft=gohtmltmpl
 			<li class="side-item"> <a href="{{ .URL | absURL }}"> {{ .Name }} </a> </li>
 		{{ end }}
 	</ul>
+	<ul class="side-nav hide-mobile">
+		{{ range .Site.Menus.findme }}
+			<li class="side-item"> <a href="{{ .URL | absURL }}"> {{ .Name }} </a> </li>
+		{{ end }}
+	</ul>
 </div>

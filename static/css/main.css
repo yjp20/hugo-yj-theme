@@ -100,6 +100,10 @@ a:not(.not-link):hover::after {
 	margin-left: none;
 }
 
+.side-nav {
+	margin-top: 0.5rem;
+}
+
 .container {
 	box-sizing: border-box;
 	padding: 2rem;
@@ -192,3 +196,20 @@ p:not(:last-child) {
 }
 
 /* }}} */
+
+.post-list {
+	list-style: none;
+	padding: 0;
+}
+
+.post-list .article-date {
+	display: inline-block;
+	width: 8ch;
+	color: #555;
+	font-size: 0.85rem;
+}
+
+.tags {
+	margin-top: 1rem;
+	font-size: 0.75rem;
+}
