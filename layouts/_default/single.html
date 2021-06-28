@@ -4,8 +4,8 @@ vim: ft=gohtmltmpl
 {{ define "main" }}
 	<article class="article">
 		<div class="article-header">
-			<h1><a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-			<p class="article-date"> {{ .Date.Format "Jan 2, 2006"}} </p>
+			<h1><a class="article-title title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+			<p class="article-date label"> {{ .Date.Format "Jan 2, 2006"}} </p>
 			<div class="toc hide-desktop">
 				{{ .TableOfContents }}
 			</div>

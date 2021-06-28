@@ -1,0 +1,3 @@
+[submodule "static/css/briefscss"]
+	path = static/css/briefscss
+	url = https://github.com/yjp20/briefscss

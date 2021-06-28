@@ -2,14 +2,14 @@
 vim: ft=gohtmltmpl
 */}}
 {{ define "main" }}
-	<h1 class="label"> {{ .Title }} </h1>
+	<h1 class="title"> {{ .Title }} </h1>
 	<ul class="post-list">
 		{{ range .Paginator.Pages }}
 			<li class="post-listing">
 				<article class="article">
 					<p>
 						<a class="article-title" href="{{ .Permalink }}">
-							<span class="article-date"> {{ .Date.Format "Jan '06"}} </span>
+							<span class="article-date label"> {{ .Date.Format "Jan '06"}} </span>
 							{{ .Title }}
 						</a>
 					</a>
