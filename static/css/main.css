@@ -996,4 +996,9 @@ a.article-title {
   font-size: 0.75rem;
 }
 
+ul {
+  padding-left: 2rem;
+  list-style: disc;
+}
+
 /*# sourceMappingURL=main.css.map */
