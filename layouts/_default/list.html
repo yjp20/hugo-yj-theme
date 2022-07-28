@@ -3,6 +3,9 @@ vim: ft=gohtmltmpl
 */}}
 {{ define "main" }}
 	<h1 class="title"> {{ .Title }} </h1>
+	<div class="content">
+		{{ .Content }}
+	</div>
 	<ul class="post-list">
 		{{ range .Paginator.Pages }}
 			<li class="post-listing">
@@ -25,4 +28,9 @@ vim: ft=gohtmltmpl
 			</p>
 		</div>
 	</ul>
+	<style>
+		.post-list {
+			margin-top: 1em;
+		}
+	</style>
 {{ end }}
