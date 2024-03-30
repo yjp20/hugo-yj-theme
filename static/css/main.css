@@ -53,101 +53,113 @@ table {
 }
 
 :root {
-  --black: hsl(231deg, 9%, 4%);
-  --dark: hsl(231deg, 9%, 30%);
-  --grey-dark: hsl(231deg, 9%, 52%);
-  --grey: hsl(231deg, 9%, 74%);
-  --grey-light: hsl(231deg, 9%, 92%);
-  --light: hsl(231deg, 9%, 98%);
-  --white: hsl(231deg, 9%, 100%);
-  --red: hsl(348deg, 69%, 50%);
+  --black: hsl(231, 9%, 4%);
+  --dark: hsl(231, 9%, 30%);
+  --grey-dark: hsl(231, 9%, 52%);
+  --grey: hsl(231, 9%, 74%);
+  --grey-light: hsl(231, 9%, 92%);
+  --light: hsl(231, 9%, 98%);
+  --white: hsl(231, 9%, 100%);
+  --red: hsl(348, 69%, 50%);
   --red-dark: #a50e2c;
   --red-light: #f1ced5;
-  --orange: hsl(24deg, 69%, 58%);
+  --orange: hsl(24, 69%, 58%);
   --orange-dark: #bf5610;
   --orange-light: #f3e1d5;
-  --yellow: hsl(44deg, 72%, 60%);
+  --yellow: hsl(44, 72%, 60%);
   --yellow-dark: #c7960f;
   --yellow-light: #f4ecd7;
-  --green: hsl(141deg, 68%, 48%);
+  --green: hsl(141, 68%, 48%);
   --green-dark: #0e9e40;
   --green-light: #ccf0d8;
-  --turquoise: hsl(171deg, 68%, 50%);
+  --turquoise: hsl(171, 68%, 50%);
   --turquoise-dark: #0ea48e;
   --turquoise-light: #cef0eb;
-  --blue: hsl(207deg, 68%, 50%);
+  --blue: hsl(207, 68%, 50%);
   --blue-dark: #0e61a4;
   --blue-light: #cee1f0;
-  --purple: hsl(271deg, 68%, 48%);
+  --purple: hsl(271, 68%, 48%);
   --purple-dark: #580e9e;
   --purple-light: #deccf0;
 }
 
 html {
-  color: hsl(231deg, 9%, 4%);
+  color: hsl(231, 9%, 4%);
   min-width: 300px;
   font-size: 16px;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: "IBM Plex Sans", "Inter", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "IBM Plex Serif", "Georgia", serif;
   line-height: 1.15;
 }
 
-.content h1,
-.title {
-  font-size: 1.25rem;
-  font-weight: bold;
+.display {
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  font-weight: 500;
 }
-.content h1:not(.is-flat):not(:first-child),
+
+h1,
+.title {
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h1:not(.is-flat):not(:first-child),
 .title:not(.is-flat):not(:first-child) {
   margin-top: 1.5rem;
 }
-.content h1:not(.is-flat):not(:last-child),
+h1:not(.is-flat):not(:last-child),
 .title:not(.is-flat):not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.content h2,
+h2,
 .subtitle {
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: 500;
 }
-.content h2:not(.is-flat):not(:first-child),
+h2:not(.is-flat):not(:first-child),
 .subtitle:not(.is-flat):not(:first-child) {
   margin-top: 1.25rem;
 }
-.content h2:not(.is-flat):not(:last-child),
+h2:not(.is-flat):not(:last-child),
 .subtitle:not(.is-flat):not(:last-child) {
   margin-bottom: 0.5rem;
 }
-.title + .content h2:not(.is-flat):not(:first-child),
+.title + h2:not(.is-flat):not(:first-child),
 .title + .subtitle:not(.is-flat):not(:first-child) {
   margin-top: 1rem;
 }
 
-.content p:not(.is-flat):not(:first-child),
+h3,
+.subsubtitle {
+  font-family: "IBM Plex Sans", "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+h3:not(.is-flat):not(:first-child),
+.subsubtitle:not(.is-flat):not(:first-child) {
+  margin-top: 0.5rem;
+}
+h3:not(.is-flat):not(:last-child),
+.subsubtitle:not(.is-flat):not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+p:not(.is-flat):not(:first-child),
 .paragraph:not(.is-flat):not(:first-child) {
   margin-top: 0.5rem;
 }
-.content p:not(.is-flat):not(:last-child),
+p:not(.is-flat):not(:last-child),
 .paragraph:not(.is-flat):not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-.content h3 {
-  font-weight: bold;
-}
-.content h3:not(.is-flat):not(:first-child) {
-  margin-top: 0.5rem;
-}
-.content h3:not(.is-flat):not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
 .label {
-  color: hsl(231deg, 9%, 30%);
+  color: hsl(231, 9%, 30%);
   font-size: 0.75em;
 }
 .label:not(.is-flat):not(:first-child) {
@@ -244,7 +256,7 @@ label {
 .border {
   border-style: solid;
   border-width: 1px;
-  border-color: hsl(231deg, 9%, 74%);
+  border-color: hsl(231, 9%, 74%);
 }
 
 .r {
@@ -264,23 +276,23 @@ label {
 }
 
 .s-1 {
-  font-size: 3rem;
-}
-
-.s-2 {
   font-size: 2.5rem;
 }
 
-.s-3 {
+.s-2 {
   font-size: 2rem;
 }
 
-.s-4 {
+.s-3 {
   font-size: 1.5rem;
 }
 
-.s-5 {
+.s-4 {
   font-size: 1.25rem;
+}
+
+.s-5 {
+  font-size: 1.125rem;
 }
 
 .s-6 {
@@ -304,8 +316,8 @@ input[type=password],
 input[type=date] {
   box-sizing: border-box;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075);
-  background-color: hsl(231deg, 9%, 100%);
-  border-color: hsl(231deg, 9%, 74%);
+  background-color: hsl(231, 9%, 100%);
+  border-color: hsl(231, 9%, 74%);
   border-width: 1px;
   border-style: solid;
   padding: 0.25em 0.25em;
@@ -591,7 +603,7 @@ desktop breakpoint.
   box-sizing: border-box;
   border-width: 1px;
   border-style: solid;
-  border-color: hsl(231deg, 9%, 74%);
+  border-color: hsl(231, 9%, 74%);
   border-radius: 4px;
   color: inherit;
   cursor: pointer;
@@ -605,10 +617,10 @@ desktop breakpoint.
   text-decoration: none;
 }
 .button:hover, a.button:hover {
-  background: hsl(231deg, 9%, 98%);
+  background: hsl(231, 9%, 98%);
 }
 .button.is-black, a.button.is-black {
-  background-color: hsl(231deg, 9%, 4%);
+  background-color: hsl(231, 9%, 4%);
   border-color: #03040b;
   color: white;
 }
@@ -616,7 +628,7 @@ desktop breakpoint.
   background-color: #03040b;
 }
 .button.is-dark, a.button.is-dark {
-  background-color: hsl(231deg, 9%, 30%);
+  background-color: hsl(231, 9%, 30%);
   border-color: #182153;
   color: white;
 }
@@ -624,7 +636,7 @@ desktop breakpoint.
   background-color: #182153;
 }
 .button.is-grey-dark, a.button.is-grey-dark {
-  background-color: hsl(231deg, 9%, 52%);
+  background-color: hsl(231, 9%, 52%);
   border-color: #2a398f;
   color: white;
 }
@@ -632,7 +644,7 @@ desktop breakpoint.
   background-color: #2a398f;
 }
 .button.is-grey, a.button.is-grey {
-  background-color: hsl(231deg, 9%, 74%);
+  background-color: hsl(231, 9%, 74%);
   border-color: #4155c7;
   color: black;
 }
@@ -640,7 +652,7 @@ desktop breakpoint.
   background-color: #4155c7;
 }
 .button.is-grey-light, a.button.is-grey-light {
-  background-color: hsl(231deg, 9%, 92%);
+  background-color: hsl(231, 9%, 92%);
   border-color: #7382d6;
   color: black;
 }
@@ -648,7 +660,7 @@ desktop breakpoint.
   background-color: #7382d6;
 }
 .button.is-light, a.button.is-light {
-  background-color: hsl(231deg, 9%, 98%);
+  background-color: hsl(231, 9%, 98%);
   border-color: #8390db;
   color: black;
 }
@@ -656,7 +668,7 @@ desktop breakpoint.
   background-color: #8390db;
 }
 .button.is-white, a.button.is-white {
-  background-color: hsl(231deg, 9%, 100%);
+  background-color: hsl(231, 9%, 100%);
   border-color: #8995dc;
   color: black;
 }
@@ -664,7 +676,7 @@ desktop breakpoint.
   background-color: #8995dc;
 }
 .button.is-red, a.button.is-red {
-  background-color: hsl(348deg, 69%, 50%);
+  background-color: hsl(348, 69%, 50%);
   border-color: #a50e2c;
   color: white;
 }
@@ -672,7 +684,7 @@ desktop breakpoint.
   background-color: #a50e2c;
 }
 .button.is-orange, a.button.is-orange {
-  background-color: hsl(24deg, 69%, 58%);
+  background-color: hsl(24, 69%, 58%);
   border-color: #bf5610;
   color: black;
 }
@@ -680,7 +692,7 @@ desktop breakpoint.
   background-color: #bf5610;
 }
 .button.is-yellow, a.button.is-yellow {
-  background-color: hsl(44deg, 72%, 60%);
+  background-color: hsl(44, 72%, 60%);
   border-color: #c7960f;
   color: black;
 }
@@ -688,7 +700,7 @@ desktop breakpoint.
   background-color: #c7960f;
 }
 .button.is-green, a.button.is-green {
-  background-color: hsl(141deg, 68%, 48%);
+  background-color: hsl(141, 68%, 48%);
   border-color: #0e9e40;
   color: black;
 }
@@ -696,7 +708,7 @@ desktop breakpoint.
   background-color: #0e9e40;
 }
 .button.is-turquoise, a.button.is-turquoise {
-  background-color: hsl(171deg, 68%, 50%);
+  background-color: hsl(171, 68%, 50%);
   border-color: #0ea48e;
   color: black;
 }
@@ -704,7 +716,7 @@ desktop breakpoint.
   background-color: #0ea48e;
 }
 .button.is-blue, a.button.is-blue {
-  background-color: hsl(207deg, 68%, 50%);
+  background-color: hsl(207, 68%, 50%);
   border-color: #0e61a4;
   color: white;
 }
@@ -712,7 +724,7 @@ desktop breakpoint.
   background-color: #0e61a4;
 }
 .button.is-purple, a.button.is-purple {
-  background-color: hsl(271deg, 68%, 48%);
+  background-color: hsl(271, 68%, 48%);
   border-color: #580e9e;
   color: white;
 }
@@ -722,8 +734,8 @@ desktop breakpoint.
 
 .box {
   display: flex;
-  background-color: hsl(231deg, 9%, 100%);
-  border-color: hsl(231deg, 9%, 74%);
+  background-color: hsl(231, 9%, 100%);
+  border-color: hsl(231, 9%, 74%);
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
@@ -740,43 +752,43 @@ desktop breakpoint.
   width: 1em;
   border-radius: 4px;
   align-self: center;
-  border: 1px solid hsl(231deg, 9%, 74%);
+  border: 1px solid hsl(231, 9%, 74%);
 }
 .swatch:not(:last-child) {
   margin-right: 0.5em;
 }
 .swatch.is-black {
-  background-color: hsl(231deg, 9%, 4%);
+  background-color: hsl(231, 9%, 4%);
   border-color: #080809;
   color: white;
 }
 .swatch.is-dark {
-  background-color: hsl(231deg, 9%, 30%);
+  background-color: hsl(231, 9%, 30%);
   border-color: #3a3b40;
   color: white;
 }
 .swatch.is-grey-dark {
-  background-color: hsl(231deg, 9%, 52%);
+  background-color: hsl(231, 9%, 52%);
   border-color: #65676f;
   color: white;
 }
 .swatch.is-grey {
-  background-color: hsl(231deg, 9%, 74%);
+  background-color: hsl(231, 9%, 74%);
   border-color: #92949c;
   color: black;
 }
 .swatch.is-grey-light {
-  background-color: hsl(231deg, 9%, 92%);
+  background-color: hsl(231, 9%, 92%);
   border-color: #b9babf;
   color: black;
 }
 .swatch.is-light {
-  background-color: hsl(231deg, 9%, 98%);
+  background-color: hsl(231, 9%, 98%);
   border-color: #c5c6ca;
   color: black;
 }
 .swatch.is-white {
-  background-color: hsl(231deg, 9%, 100%);
+  background-color: hsl(231, 9%, 100%);
   border-color: #cacace;
   color: black;
 }
@@ -786,7 +798,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-red {
-  background-color: hsl(348deg, 69%, 50%);
+  background-color: hsl(348, 69%, 50%);
   border-color: #894351;
   color: white;
 }
@@ -801,7 +813,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-orange {
-  background-color: hsl(24deg, 69%, 58%);
+  background-color: hsl(24, 69%, 58%);
   border-color: #9f6e4d;
   color: black;
 }
@@ -816,7 +828,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-yellow {
-  background-color: hsl(44deg, 72%, 60%);
+  background-color: hsl(44, 72%, 60%);
   border-color: #a68f4e;
   color: black;
 }
@@ -831,7 +843,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-green {
-  background-color: hsl(141deg, 68%, 48%);
+  background-color: hsl(141, 68%, 48%);
   border-color: #418358;
   color: black;
 }
@@ -846,7 +858,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-turquoise {
-  background-color: hsl(171deg, 68%, 50%);
+  background-color: hsl(171, 68%, 50%);
   border-color: #43897e;
   color: black;
 }
@@ -861,7 +873,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-blue {
-  background-color: hsl(207deg, 68%, 50%);
+  background-color: hsl(207, 68%, 50%);
   border-color: #436989;
   color: white;
 }
@@ -876,7 +888,7 @@ desktop breakpoint.
   color: black;
 }
 .swatch.is-purple {
-  background-color: hsl(271deg, 68%, 48%);
+  background-color: hsl(271, 68%, 48%);
   border-color: #634183;
   color: white;
 }
@@ -887,9 +899,9 @@ desktop breakpoint.
 }
 
 .card {
-  --bo: toChannels(hsl(231deg, 9%, 74%));
-  background-color: hsl(231deg, 9%, 100%);
-  border-color: hsl(231deg, 9%, 74%);
+  --bo: toChannels(hsl(231, 9%, 74%));
+  background-color: hsl(231, 9%, 100%);
+  border-color: hsl(231, 9%, 74%);
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
@@ -901,7 +913,7 @@ desktop breakpoint.
   margin-bottom: 1rem;
 }
 .card > *:not(:first-child) {
-  border-color: hsl(231deg, 9%, 74%);
+  border-color: hsl(231, 9%, 74%);
   border-top-width: 1px;
   border-top-style: solid;
 }
@@ -909,11 +921,11 @@ desktop breakpoint.
 .card-header {
   font-weight: bold;
   padding: 0.75rem;
-  background-color: hsl(231deg, 9%, 98%);
+  background-color: hsl(231, 9%, 98%);
 }
 
 .card-body > *:not(:first-child) {
-  border-color: hsl(231deg, 9%, 74%);
+  border-color: hsl(231, 9%, 74%);
   border-top-width: 1px;
   border-top-style: solid;
 }
@@ -921,13 +933,13 @@ desktop breakpoint.
 .card-item {
   display: flex;
   padding: 0.75rem;
-  background-color: hsl(231deg, 9%, 100%);
+  background-color: hsl(231, 9%, 100%);
   border: 0;
   width: 100%;
   box-sizing: border-box;
 }
 .card.is-selectable > .card-item:hover, .card.is-selectable > .card-body > .card-item:hover {
-  background-color: hsl(231deg, 9%, 98%);
+  background-color: hsl(231, 9%, 98%);
 }
 .card-item:not(.is-vertical) {
   align-items: center;
@@ -940,7 +952,6 @@ body {
   display: flex;
   padding: 2rem 0;
   margin: 0;
-  font-family: "IBM Plex Sans", "sans-serif";
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
@@ -990,6 +1001,11 @@ pre {
 
 .side-nav {
   margin-top: 0.5rem;
+}
+
+hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 900px) {

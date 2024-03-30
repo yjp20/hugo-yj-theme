@@ -7,10 +7,14 @@
 		<meta name="author" content="{{ .Site.Params.author}}" />
 	{{- end }}
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700|IBM+Plex+Mono:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,500|IBM+Plex+Mono:400,500&display=swap" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="{{ "css/briefs.min.css" | absURL }}">
 	<link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}">
 	<link type="text/css" rel="stylesheet" href="{{ "css/syntax.css" | absURL }}">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 	<link rel="canonical" href="{{ .Permalink }}">
 	<link rel="icon" href="{{ $.Site.Params.favicon | absURL }}"/>
