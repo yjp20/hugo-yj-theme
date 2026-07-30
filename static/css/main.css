@@ -186,8 +186,25 @@ em {
   font-style: italic;
 }
 
+strong {
+  font-weight: bold;
+}
+
 label {
   display: block;
+}
+
+hr {
+  border: 0;
+  border-color: hsl(231, 9%, 74%);
+  border-style: solid;
+  border-top-width: 1px;
+}
+hr:not(.is-flat):not(:first-child) {
+  margin-top: 1.5rem;
+}
+hr:not(.is-flat):not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .fl {
@@ -1089,6 +1106,20 @@ ul {
 
 .container {
   margin: 0;
+}
+
+.content {
+  position: relative;
+}
+
+.sidenote {
+  position: absolute;
+  right: 0;
+  height: min-content;
+  width: 15rem;
+  font-size: 0.75rem;
+  margin-right: -16rem;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=main.css.map */

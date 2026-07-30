@@ -164,3 +164,19 @@ ul {
 .container {
   margin: 0;
 }
+
+.content {
+  position: relative;
+}
+
+$sidenote-width: 15rem;
+
+.sidenote {
+  position: absolute;
+  right: 0;
+  height: min-content;
+  width: $sidenote-width;
+  font-size: 0.75rem;
+  margin-right: -($sidenote-width + 1rem);
+  box-sizing: border-box;
+}
